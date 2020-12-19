@@ -1,8 +1,15 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { Switch } from '@material-ui/core';
 
 function App() {
-  return <Button color="primary">Hello World</Button>;
+  let [checked, setChecked] = React.useState(true);
+
+  const toggleChecked = () => {
+    window.console.log(`Setting checked to ${!checked}`)
+    setChecked(!checked)
+  };
+  
+  return <Switch color="primary" checked={checked} onChange={toggleChecked} />;
 }
 
 export default App;
