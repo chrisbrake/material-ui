@@ -20,6 +20,11 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
+
+import FolderIcon from '@material-ui/icons/Folder';
+
+import { RecipeReviewCard } from './ComplexInteraction.js'
+
 const App = (props) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
@@ -43,8 +48,13 @@ const App = (props) => {
 
 
       <h1>My Test Page</h1>
-
-
+      <br />
+      <br />
+      <br />
+      <RecipeReviewCard />
+      <br />
+      <br />
+      <br />
       <Switch color="default" checked={primaryChecked} onChange={() => setPrimaryChecked(!primaryChecked)} />
       <Switch color="primary" checked={primaryChecked} onChange={() => setPrimaryChecked(!primaryChecked)} />
       <Switch color="secondary" checked={secondaryChecked} onChange={() => setSecondaryChecked(!secondaryChecked)} />
@@ -177,6 +187,47 @@ const App = (props) => {
         <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
       </BottomNavigation>
+
+
+
+      <br />
+      <br />
+      <br />
+
+
+
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}>
+        <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+      </BottomNavigation>
+
+      <br />
+      <br />
+      <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </ThemeProvider>
   );
 }
