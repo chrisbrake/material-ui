@@ -29,8 +29,10 @@ const App = (props) => {
       <h1>My Test Page</h1>
 
 
+      <Switch color="default" checked={primaryChecked} onChange={() => setPrimaryChecked(!primaryChecked)} />
       <Switch color="primary" checked={primaryChecked} onChange={() => setPrimaryChecked(!primaryChecked)} />
       <Switch color="secondary" checked={secondaryChecked} onChange={() => setSecondaryChecked(!secondaryChecked)} />
+      <Switch disabled checked={secondaryChecked} onChange={() => setSecondaryChecked(!secondaryChecked)} />
 
 
       <Button variant="contained">Default</Button>
@@ -47,7 +49,9 @@ const App = (props) => {
         Link
       </Button>
 
-      <Button variant="outlined">Default</Button>
+      <Button variant="outlined">
+        Default
+      </Button>
       <Button variant="outlined" color="primary">
         Primary
       </Button>
