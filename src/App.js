@@ -24,6 +24,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import FolderIcon from '@material-ui/icons/Folder';
 
 import { RecipeReviewCard } from './ComplexInteraction.js'
+import { PrimarySearchAppBar } from './AppBar.js'
 
 const App = (props) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -46,8 +47,11 @@ const App = (props) => {
       <CssBaseline />
 
 
-
       <h1>My Test Page</h1>
+      <br />
+      <br />
+      <br />
+      <PrimarySearchAppBar />
       <br />
       <br />
       <br />
