@@ -25,6 +25,7 @@ import FolderIcon from '@material-ui/icons/Folder';
 
 import { RecipeReviewCard } from './ComplexInteraction.js'
 import { PrimarySearchAppBar } from './AppBar.js'
+import { BottomAppBar } from './BottomAppBar.tsx'
 
 const App = (props) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -48,6 +49,10 @@ const App = (props) => {
 
 
       <h1>My Test Page</h1>
+      <br />
+      <br />
+      <br />
+      <BottomAppBar/>
       <br />
       <br />
       <br />
