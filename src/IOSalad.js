@@ -1,8 +1,6 @@
 import React from 'react';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { Switch, Button, TextField} from '@material-ui/core';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { Switch, Button, TextField } from '@material-ui/core';
 
 import DeleteIcon from '@material-ui/icons/Delete';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
@@ -13,8 +11,11 @@ import SaveIcon from '@material-ui/icons/Save';
 import IconButton from '@material-ui/core/IconButton';
 import AlarmIcon from '@material-ui/icons/Alarm';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-
-
+import RemoveIcon from '@material-ui/icons/Remove';
+import AddIcon from '@material-ui/icons/Add';
+import RouterIcon from '@material-ui/icons/Router';
+import WifiTetheringIcon from '@material-ui/icons/WifiTethering';
+import PortableWifiOffIcon from '@material-ui/icons/PortableWifiOff';
 
 
 const IOSalad = (props) => {
@@ -83,12 +84,25 @@ const IOSalad = (props) => {
       </Button>
       </div>
       <br />
-      <br />
-      <br />
-      <IconButton aria-label="delete">
-        <DeleteIcon />
+
+      <IconButton aria-label="router">
+        <RouterIcon />
+      </IconButton>
+      <IconButton onClick={() => setPrimaryChecked(!primaryChecked)}>
+        {/* Icon swap based on state */
+          (primaryChecked) ? <WifiTetheringIcon /> : <PortableWifiOffIcon />}
+      </IconButton>
+
+      <IconButton aria-label="remove">
+        <RemoveIcon />
+      </IconButton>
+      <IconButton aria-label="add">
+        <AddIcon />
       </IconButton>
       <IconButton aria-label="delete" disabled color="primary">
+        <DeleteIcon />
+      </IconButton>
+      <IconButton aria-label="delete">
         <DeleteIcon />
       </IconButton>
       <IconButton color="secondary" aria-label="add an alarm">
@@ -100,37 +114,17 @@ const IOSalad = (props) => {
       <br />
       <br />
       <br />
-      <Button variant="contained">
-        Default
-      </Button>
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-      <Button variant="contained" color="secondary">
-        Secondary
-      </Button>
-      <Button variant="contained" disabled>
-        Disabled
-      </Button>
-      <Button variant="contained" color="primary" href="#contained-buttons">
-        Link
-      </Button>
-
-      <Button variant="outlined">
-        Default
-      </Button>
-      <Button variant="outlined" color="primary">
-        Primary
-      </Button>
-      <Button variant="outlined" color="secondary">
-        Secondary
-      </Button>
-      <Button variant="outlined" disabled>
-        Disabled
-      </Button>
-      <Button variant="outlined" color="primary" href="#outlined-buttons">
-        Link
-      </Button>
+      <Button variant="contained"> Default </Button>
+      <Button variant="contained" color="primary"> Primary </Button>
+      <Button variant="contained" color="secondary"> Secondary </Button>
+      <Button variant="contained" disabled> Disabled </Button>
+      <Button variant="contained" color="primary" href="#contained-buttons"> </Button>
+      <br />
+      <Button variant="outlined">Default</Button>
+      <Button variant="outlined" color="primary"> Primary </Button>
+      <Button variant="outlined" color="secondary"> Secondary </Button>
+      <Button variant="outlined" disabled> Disabled </Button>
+      <Button variant="outlined" color="primary" href="#outlined-buttons"> Link </Button>
       <br />
       <br />
       <br />

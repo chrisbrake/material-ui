@@ -1,32 +1,16 @@
 import React from 'react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-
-import { Switch, Button, CssBaseline, TextField } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
-import DeleteIcon from '@material-ui/icons/Delete';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
-import Icon from '@material-ui/core/Icon';
-import SaveIcon from '@material-ui/icons/Save';
-
-import IconButton from '@material-ui/core/IconButton';
-import AlarmIcon from '@material-ui/icons/Alarm';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-
-
 import FolderIcon from '@material-ui/icons/Folder';
-
 import { RecipeReviewCard } from './ComplexInteraction.js'
 import { PrimarySearchAppBar } from './AppBar.js'
 import { BottomAppBar } from './BottomAppBar.tsx'
-
 import IOSalad from './IOSalad'
 
 const App = (props) => {
