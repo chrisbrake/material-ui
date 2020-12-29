@@ -16,12 +16,14 @@ import AddIcon from '@material-ui/icons/Add';
 import RouterIcon from '@material-ui/icons/Router';
 import WifiTetheringIcon from '@material-ui/icons/WifiTethering';
 import PortableWifiOffIcon from '@material-ui/icons/PortableWifiOff';
+import SettingsRemoteIcon from '@material-ui/icons/SettingsRemote';
 
 
 const IOSalad = (props) => {
 
   let [primaryChecked, setPrimaryChecked] = React.useState(true);
   let [secondaryChecked, setSecondaryChecked] = React.useState(true);
+  let [oneWayTrip, setOneWayTrip] = React.useState(false);
 
   return (
     <div>
@@ -84,6 +86,10 @@ const IOSalad = (props) => {
       </Button>
       </div>
       <br />
+      {/* disabling prevents clicks from registering */}
+      <IconButton disabled={oneWayTrip} onClick={() => setOneWayTrip(!oneWayTrip)}>
+        <SettingsRemoteIcon />
+      </IconButton>
 
       <IconButton aria-label="router">
         <RouterIcon />
@@ -118,7 +124,7 @@ const IOSalad = (props) => {
       <Button variant="contained" color="primary"> Primary </Button>
       <Button variant="contained" color="secondary"> Secondary </Button>
       <Button variant="contained" disabled> Disabled </Button>
-      <Button variant="contained" color="primary" href="#contained-buttons"> </Button>
+      <Button variant="contained" color="primary" href="#contained-buttons"> Link </Button>
       <br />
       <Button variant="outlined">Default</Button>
       <Button variant="outlined" color="primary"> Primary </Button>
